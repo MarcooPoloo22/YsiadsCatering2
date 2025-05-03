@@ -1,0 +1,203 @@
+
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }
+
+.admin-login-pic img {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin-left: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 767px) {
+  .admin-login-pic img {
+    display: none;
+  }
+  .admin-login-form {
+    margin-top: 25% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.design-pic{
+  position: absolute;
+  top: -3%;
+  left: -2%;
+  z-index: 999;
+  width: 10vw;
+  height: auto;
+  max-height: 20vh;
+}
+
+.admin-login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 8%;
+  flex-shrink: 0;
+  gap: 16px;
+  position: relative;
+  width: 436px;
+  height: 477px;
+  left: 9%;
+  padding-right: 10%;
+  z-index: 2;
+}
+
+.admin-login-form img{
+  width: 64%;
+  height: 15%;
+}
+
+.admin-login-form .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 16px;
+    position: relative;
+    width: 221px;
+    z-index: 3;
+  }
+  .admin-login-form .frame .admin-login {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 43px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 42.9px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 4;
+  }
+  .admin-login-form .frame .sign-in {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 28px;
+    color: #8a92a6;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 5;
+  }
+
+  .username-email-address {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 28px;
+    color: #8a92a6;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 9;
+  }
+
+  .emailLabel, .passwordLabel, .codeLabel{
+    position: relative;
+    color: #8a92a6;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 9;
+    margin-bottom: 4.8%;
+  }
+
+  .password, .email, .codes{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 227px;
+    position: relative;
+    width: 436px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid #3a57e8;
+    border-radius: 4px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+  }
+
+  .Remember {
+    height: 28px;
+    color: #8a92a6;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 20;
+  }
+  
+  .Forgot {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 28px;
+    color: #3a57e8;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    left: 39.5%;
+    white-space: nowrap;
+    z-index: 21;
+  }
+
+  .login-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    width: 188px;
+    padding: 8px 24px 8px 24px;
+    cursor: pointer;
+    background: #3a57e8;
+    border: none;
+    z-index: 22;
+    border-radius: 4px;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    white-space: nowrap;
+    color: #ffffff;
+    margin-left: 28%;
+    margin-top: 3%;
+  }
+
+  .form-bottom{
+    margin-top:0.5%;
+    margin-bottom: 1.5%;
+  }

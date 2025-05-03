@@ -1,0 +1,54 @@
+.spa__comingsoon-section {
+  background: white;
+  color: #3e3e3e;
+  
+  padding: 4rem 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.spa__heading {
+  font-family: "Georgia", serif;
+  font-weight: 600px;
+  font-size: 3rem;
+  color: #c6ac8f;
+  margin-bottom: 1rem;
+  caret-color: transparent;
+}
+
+.spa__subheading {
+  font-size: 1.155rem; /* Slightly smaller for elegance */
+  font-weight: 400; /* Normal weight */
+  font-family: "Georgia", serif;
+  line-height: 1.7;
+  color: #5f5f5f;
+  max-width: 520px;
+  caret-color: transparent;
+}
+
+.spa__image-wrapper {
+  max-width: 240px; /* Control size */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%; /* Makes the wrapper a perfect circle */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Optional soft shadow */
+}
+
+.spa__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image inside match the circle */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}

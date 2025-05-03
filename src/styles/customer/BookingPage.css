@@ -1,0 +1,369 @@
+html, body {
+  scroll-padding-top: 60px;
+}
+
+.booking-container {
+  height:400px;           /* Reduced height from previous larger setting */
+  min-height: unset;       /* Remove any min-height overrides */
+  padding: 25px 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.booking-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.booking-title-wrapper {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* or any height you want */
+}
+
+
+.booking-title {
+  color: white;
+  font-size: 3rem; /* increased from 2.5rem */
+  font-family: "Georgia", "Garamond", "Palatino Linotype", "Book Antiqua", serif;
+  font-weight: 800; /* fixed the incorrect px unit */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+
+/* Don't let form items get too narrow */
+.white-box {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  min-width: 300px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.white-box > * {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.branch-label,
+.service-label,
+.bookdate-label,
+.booktime-label,
+.staffselect-label,
+.fname-label,
+.lname-label,
+.email-label,
+.connumb-label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control,
+.form-select,
+.book-control,
+.staff-dropdown,
+.short-dropdown {
+  font-size: 1.2rem;
+  padding: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.short-dropdown {
+  height: 38px;
+}
+
+.booking-summary-popup {
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: white;
+}
+
+.btn-primary {
+  margin-top: 40px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(to right, #8BC34A, #66BB6A);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #7CB342, #4CAF50);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.booking-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px 0;
+  text-align: left;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-label {
+  font-weight: bold;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.summary-value {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.swal2-actions {
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-confirm,
+.btn-cancel {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-confirm {
+  background-color: #6CB33F;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background-color: #a2bf5a;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.btn-cancel:hover {
+  background-color: #b52a37;
+}
+
+.btn-payment {
+  background: linear-gradient(to right, #8BC34A, #66BB6A);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-payment:hover {
+  background: linear-gradient(to right, #7CB342, #4CAF50);
+  color: white;
+  transform: translateY(-2px);
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #8bc34a66;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Grid & Layout Adjustments for Mobile */
+@media (max-width: 768px) {
+
+  .white-box {
+    width: 80% !important;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .form-control,
+  .form-select,
+  .book-control,
+  .staff-dropdown,
+  .short-dropdown {
+    font-size: 1rem;
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 60px !important;  /* <- add !important to override */
+  }
+
+  .booking-title {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .btn-confirm,
+  .btn-cancel {
+    width: 100%;
+  }
+
+/* Improve input usability on mobile */
+.form-control,
+.form-select,
+.book-control,
+.staff-dropdown,
+.short-dropdown {
+  font-size: 1rem;
+  padding: 14px 12px;
+  min-width: 260px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+
+  .btn-primary {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 20px;
+    margin-top: 25px;
+  }
+
+  .d-grid.col-6 {
+    width: 100% !important;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .col,
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .booking-summary-popup {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .summary-label,
+  .summary-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-title {
+    font-size: 1.5rem;
+  }
+
+  .white-box {
+    width: 80% !important;
+    padding: 20px 18px;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .swal2-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-confirm,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+/* SweetAlert adjustments */
+.custom-payment-modal {
+  padding: 10px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 720px !important;
+}
+
+.custom-html-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.payment-modal-content .container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 10px !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .custom-payment-modal {
+    width: 90% !important;
+    padding: 5px !important;
+  }
+
+  .payment-modal-content .container {
+    width: 100% !important;
+    padding: 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-payment-modal {
+    width: 95% !important;
+    padding: 5px !important;
+  }
+
+  .payment-modal-content .container {
+    padding: 5px !important;
+  }
+}

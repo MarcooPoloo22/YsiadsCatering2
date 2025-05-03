@@ -1,0 +1,66 @@
+[19-Mar-2025 14:22:13 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin_dashboard`.`services`, CONSTRAINT `services_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`)) in C:\xampp\htdocs\admin_dashboard_backend\add_service.php:81
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_service.php(81): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_service.php on line 81
+[19-Mar-2025 14:59:57 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin_dashboard`.`services`, CONSTRAINT `services_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`)) in C:\xampp\htdocs\admin_dashboard_backend\add_service.php:81
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_service.php(81): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_service.php on line 81
+[19-Mar-2025 15:18:49 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\admin_dashboard_backend\add_service.php:114
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_service.php(114): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_service.php on line 114
+[19-Mar-2025 15:38:08 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin_dashboard`.`services`, CONSTRAINT `services_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`)) in C:\xampp\htdocs\admin_dashboard_backend\add_service.php:114
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_service.php(114): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_service.php on line 114
+[23-Mar-2025 10:09:20 Europe/Berlin] Session Data at Start: Array
+(
+)
+
+[23-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\admin_dashboard_backend/../config/db.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:09:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\admin_dashboard_backend/../config/db.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:11:22 Europe/Berlin] Session Data at Start: Array
+(
+)
+
+[23-Mar-2025 10:11:22 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\admin_dashboard_backend/../config/db.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:11:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\admin_dashboard_backend/../config/db.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:13:59 Europe/Berlin] Session Data at Start: Array
+(
+)
+
+[23-Mar-2025 10:13:59 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\admin_dashboard_backend/../config/db.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:13:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\admin_dashboard_backend/../config/db.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:18:04 Europe/Berlin] Session Data at Start: Array
+(
+)
+
+[23-Mar-2025 10:18:04 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\admin_dashboard_backend/../config/db.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[23-Mar-2025 10:18:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\admin_dashboard_backend/../config/db.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\update_surgery_image.php on line 36
+[09-Apr-2025 16:14:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php:161
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php(161): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php on line 161
+[09-Apr-2025 16:14:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php:161
+Stack trace:
+#0 C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php(161): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\admin_dashboard_backend\add_surgery.php on line 161

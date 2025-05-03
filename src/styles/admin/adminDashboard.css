@@ -1,0 +1,475 @@
+
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }  
+
+  .button.active {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+
+  .dashboard-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    top: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 11;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 10px 30px 0 rgba(17, 38, 146, 0.05);
+  }
+
+  
+  .logo {
+    width: 240px;
+    margin-top: 6px;
+    background-attachment: fixed;
+  }
+
+  .icon{
+    margin-bottom: 3px;
+    margin-right: 7px;
+  }
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    width: 83px;
+    z-index: 2;
+    right: 20px;
+  }
+
+  .admin-header{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 27px;
+    flex-wrap: wrap; 
+  }
+
+  .admin-logout {
+    background-color: transparent;
+    border: 1px solid #424242;
+    border-radius: 8px;
+    color: #424242;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto; /* Ensures the width fits the content */
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.admin-logout:hover {
+    background-color: #bc2222;
+    color: white;
+}
+
+
+
+  .admin-name {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 28px;
+    color: #232d42;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 3;
+  }
+  .role {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 17px;
+    color: #8a92a6;
+    font-family: Inter, var(--default-font-family);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16.9px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 4;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    margin: 0 auto;
+    background: #ffffff;
+    backdrop-filter: blur(32px);
+    align-items: flex-end;
+  }
+  
+  .design-pic {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 13vw;
+    height: auto;
+    z-index: 1; 
+    pointer-events: none;
+  }
+
+  .button {
+    width: 231px;
+    margin: 1px 3px 0 1px;
+    padding: 10px;
+    z-index: 999;
+    background-color: transparent;
+    position: relative;
+    color: #8a92a6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 9%;
+  }
+  
+  .button:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+  
+  .content-area {
+    margin-left: 240px;
+    flex: 1;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    overflow: auto;
+  }
+  
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    margin-left: 14px;
+    margin-right: 4px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    text-align: left;
+  }
+
+  .button-page{
+    flex-shrink: 0;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 0 8px;
+    background-size: 100% 100%;
+    z-index: 40;
+  }
+
+  .divider{
+    border-top: 0.8px solid #adb5bd;
+    border-radius: 100px;
+    width: 200px;
+    margin-left: 9%;
+  }
+
+  .division{
+    margin-top: 3px;
+    margin-left: 9.1%;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 28px;
+    color: #adb5bd;
+    font-family: Inter, var(--default-font-family);
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 35;
+  }
+
+  .welcome{
+    width: 100%;
+    top: -20px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Welcome section styles */
+.welcome-container {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+.welcome-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: left;
+  color: white;
+  padding: 40px;
+}
+
+.welcome-role {
+  color: var(--FFFFFF-Bg-1, #FFF);
+  text-align: center;
+  font-family: Inter, var(--default-font-family);;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.welcome-message {
+  color: var(--FFFFFF-Bg-1, #FFF);
+  margin-top: 8px;
+  text-align: center;
+  font-family: Inter, var(--default-font-family); ;
+  font-size: 17 px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; 
+}
+
+  .faq-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    margin-left: 14px;
+    margin-right: 4px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-text{
+    color: #04040b;
+    font-family: Inter, var(--default-font-family);
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .add-faq-button {
+    width: 100px;
+    height: 28px;
+    background-color: #007c1f;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .faq-header{
+    height: 38px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .questions-label{
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-bottom: 1.5%;
+  }
+
+  .divider-faq{
+    border-top: 0.8px solid #adb5bd;
+    border-radius: 100px;
+    margin-top: 1.5%;
+    margin-right: 9px;
+    margin-left: 9px;    
+  }
+
+  .question{
+    padding: 11px;
+    color: #04040b;
+    display: flex;
+    justify-content: space-between;
+    font-family: Inter, var(--default-font-family);
+    font-size: 13px;
+  }
+
+  .edit-button{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin-bottom: -3px;
+    color: #4F9EF7;
+    cursor: pointer;
+  }
+  
+  .delete-button{
+    background-color: transparent;
+    border: none;
+    margin-left: 2px;
+    padding: 0px;
+    margin-bottom: -3px;
+    color: #D20200;
+    cursor: pointer;
+  }
+
+  /* manage edit faq css */
+
+  .button-ManageFAQEdit{
+
+    width: 384px;
+    height: 34px;
+    background-color: #007c1f;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #cecdcd;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 3.1%;
+    margin-bottom: 1.6%;
+  }
+
+  .faq-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .answerInput, .questionInput {
+    padding: 2px 0 2px 12px;
+    height: 30px;
+    color: #04040b;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    border: 1px solid #989898;
+    font-family: Inter, var(--default-font-family);
+    font-size: 13px;
+  }
+
+  .questionLabel, .answerLabel {
+    margin-left: 1px;
+    margin-bottom: 3px;
+    color: #424242;
+    font-family: Inter, var(--default-font-family);
+    font-size: 15px;
+  }
+
+  .form-group{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 700px;
+    margin-top: 2%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .faq-edit-backbutton{
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    color: #ffffff;
+    background-color: #007c1f;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .align-left{
+    width: 700px;
+    justify-content: flex-start;
+  }
+
+  .time-slot-manager {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.time-slot-input {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.time-slot-input input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.time-slot-input button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.time-slots-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.time-slot-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.delete-slot-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}

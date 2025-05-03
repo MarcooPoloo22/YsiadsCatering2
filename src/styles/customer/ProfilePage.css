@@ -1,0 +1,234 @@
+.profile-container {
+  display: flex;
+  min-height: calc(100vh - 100px);
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.profile-sidebar {
+  width: 250px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar h3 {
+  margin-bottom: 20px;
+}
+
+.profile-sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: #a2bf5a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.profile-sidebar button.active,
+.profile-sidebar button:hover {
+  background: #6CB33F;
+}
+
+.profile-content {
+  flex: 1;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+  position: relative;
+}
+
+.account-details,
+.password-change,
+.booking-history {
+  background: white;
+  padding: 20px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.account-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.account-info-grid label {
+  font-weight: bold;
+}
+
+.account-info-grid label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.account-info-grid p strong {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.account-info-grid > div {
+  display: flex;
+  align-items: center;
+}
+
+.account-info-grid input,
+.password-change input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.password-change {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.password-change input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.save-button,
+.cancel-button,
+.update-password {
+  background: linear-gradient(to right, #8BC34A, #66BB6A); /* green gradient */
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button:hover,
+.cancel-button:hover,
+.update-password:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #7CB342, #4CAF50); /* darker on hover */
+}
+
+.save-button {
+  margin-right: 15px;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+}
+
+.cancel-button:hover {
+  background-color: #b52a37;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.booking-history {
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.booking-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.booking-list-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px 5px 0 0;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.booking-item:last-child {
+  border-bottom: none;
+}
+
+.rate-button {
+  background-color: #a2bf5a;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.rate-button:hover {
+  background-color: #6CB33F;
+}
+
+.rating-display {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .booking-list-header,
+  .booking-item {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-list-header div,
+  .booking-item div {
+    padding: 5px 0;
+  }
+  
+  .profile-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .profile-sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .profile-content {
+    margin: 15px;
+  }
+}

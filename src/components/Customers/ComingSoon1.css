@@ -1,0 +1,65 @@
+.ezy__comingsoon1 {
+  --bs-body-color: #262830;
+  --bs-body-bg: #ffffff;
+  background-color: var(--bs-body-bg);
+  padding: 80px 0;
+  font-family: "Georgia", serif;
+}
+
+/* Heading */
+.ezy__comingsoon1-heading {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #c6ac8f;
+  line-height: 1.3;
+  caret-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .ezy__comingsoon1-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Subheading */
+.ezy__comingsoon1-sub-heading {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #5a5a5a;
+  opacity: 0.9;
+  max-width: 500px;
+  caret-color: transparent;
+}
+
+/* Image Grid */
+.ezy__comingsoon1-image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.ezy__comingsoon1-image-grid img {
+  border-radius: 20px;
+  object-fit: cover;
+  max-width: 235px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.ezy__comingsoon1-image-grid img:hover {
+  transform: scale(1.03);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}

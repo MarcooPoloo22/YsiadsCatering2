@@ -1,0 +1,174 @@
+/* messages.css */
+
+/* Overall container */
+.messages-container {
+  display: flex;
+  height: 90vh;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Inbox sidebar */
+.inbox {
+  width: 30%;
+  background: linear-gradient(135deg, #edf2f7, #e2e8f0);
+  padding: 20px;
+  border-right: 1px solid #d1d5db;
+  overflow-y: auto;
+}
+
+.inbox-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.chat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-item {
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-item:hover {
+  background-color: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+.chat-item.active {
+  background-color: #3182ce;
+  color: #fff;
+  border-color: #2b6cb0;
+}
+
+.chat-id {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.chat-snippet {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.no-chat {
+  text-align: center;
+  color: #a0aec0;
+}
+
+/* Chat details panel */
+.chat-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.chat-header {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+  color: #2d3748;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.message-author {
+  font-weight: bold;
+  font-size: 15px;
+  color: #3182ce;
+  margin-bottom: 4px;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.message-timestamp {
+  font-size: 12px;
+  color: #718096;
+}
+
+.no-messages {
+  text-align: center;
+  color: #a0aec0;
+  padding: 20px;
+}
+
+/* Reply section */
+.chat-reply {
+  display: flex;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.reply-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.reply-input:focus {
+  border-color: #3182ce;
+}
+
+.reply-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reply-button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Placeholder for when no chat is selected */
+.no-chat-selected {
+  font-size: 18px;
+  color: #718096;
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,484 @@
+Array
+(
+    [name] => Hydro Facial
+    [description] => This is a hydro Facial
+    [price] => 455
+    [selectedBranches] => ["6","7"]
+    [selectedStaff] => [1,3]
+    [duration] => 5
+)
+Array
+(
+    [file] => Array
+        (
+            [name] => skin_rejuvenation.jpg
+            [full_path] => skin_rejuvenation.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpB698.tmp
+            [error] => 0
+            [size] => 40573
+        )
+
+)
+Array
+(
+    [name] => Hydro Facial
+    [description] => This is a hydro Facial
+    [price] => 3456
+    [selectedBranches] => ["6","7"]
+    [selectedStaff] => [1,3]
+    [duration] => 2
+)
+Array
+(
+    [file] => Array
+        (
+            [name] => bart.jpg
+            [full_path] => bart.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA414.tmp
+            [error] => 0
+            [size] => 161877
+        )
+
+)
+Array
+(
+    [name] => Hydro Facial
+    [description] => This is a hydro Facial
+    [price] => 199
+    [selectedBranches] => ["6","7"]
+    [selectedStaff] => [1,3]
+    [duration] => 1
+)
+Array
+(
+    [file] => Array
+        (
+            [name] => skin_rejuvenation.jpg
+            [full_path] => skin_rejuvenation.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpCD06.tmp
+            [error] => 0
+            [size] => 40573
+        )
+
+)
+POST Data: Array
+(
+    [name] => Hydro Facial
+    [description] => This is a hydro Facial
+    [price] => 3456
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [1]
+    [duration] => 5
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => cheesy burger.jpg
+            [full_path] => cheesy burger.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8548.tmp
+            [error] => 0
+            [size] => 40662
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Hydro YAehsa
+    [description] => This is the description for Service 1
+    [price] => 3456
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [1]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => bart.jpg
+            [full_path] => bart.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1160.tmp
+            [error] => 0
+            [size] => 161877
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Hydro YAehsa
+    [description] => This is the description for Service 1
+    [price] => 98
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [4]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => bart.jpg
+            [full_path] => bart.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php438C.tmp
+            [error] => 0
+            [size] => 161877
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Hydro YAehsa
+    [description] => This is the description for Service 1
+    [price] => 3456
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [1,4]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => body_scrub.jpg
+            [full_path] => body_scrub.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5B2.tmp
+            [error] => 0
+            [size] => 37913
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Hydro YAehsa
+    [description] => This is the description for Service 1
+    [price] => 455
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [1]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => bart.jpg
+            [full_path] => bart.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpDDBD.tmp
+            [error] => 0
+            [size] => 161877
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Armand
+    [description] => This is a hydro Facial
+    [price] => 199
+    [selectedBranches] => ["6","7"]
+    [selectedStaff] => [1,3]
+    [duration] => 4
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => cheesy burger.jpg
+            [full_path] => cheesy burger.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD702.tmp
+            [error] => 0
+            [size] => 40662
+        )
+
+)
+
+POST Data: Array
+(
+    [name] => Servicesss
+    [description] => This is the description for Service 2
+    [price] => 3456
+    [selectedBranches] => ["6"]
+    [selectedStaff] => [1]
+    [duration] => 6
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => skin_rejuvenation.jpg
+            [full_path] => skin_rejuvenation.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php3D35.tmp
+            [error] => 0
+            [size] => 40573
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => ASR Gluta IV Push or Vit C Drip
+    [description] => ASR WHITENING SERVICE - For Immune System Booster W/ Whitening. +1 or 5 Treatment Points
+    [price] => 3995
+    [branch_ids] => ["6","7"]
+    [staff_ids] => ["1","4","3"]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => dora.jpg
+            [full_path] => dora.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpCDEE.tmp
+            [error] => 0
+            [size] => 105188
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Deep Cleansing Facial
+    [description] => Deep Cleansing Facial
+    [price] => 399
+    [selectedBranches] => ["6","7"]
+    [selectedStaff] => ["1","4","3"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => dora.jpg
+            [full_path] => dora.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php3E0E.tmp
+            [error] => 0
+            [size] => 105188
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Acne Control Facial
+    [description] => Acne Control Facial
+    [price] => 499
+    [selectedBranches] => ["6"]
+    [selectedStaff] => ["1","4"]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => hellokitty.png
+            [full_path] => hellokitty.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpB93A.tmp
+            [error] => 0
+            [size] => 52762
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Intensive Whitening Facial
+    [description] => Intensive Whitening Facial
+    [price] => 499
+    [selectedBranches] => ["7"]
+    [selectedStaff] => ["3","8","9"]
+    [duration] => 2
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => tomjerry.jpg
+            [full_path] => tomjerry.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php2EC9.tmp
+            [error] => 0
+            [size] => 112982
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Diamond Peel (Microdermabrasion)
+    [description] => Diamond Peel (Microdermabrasion)
+    [price] => 599
+    [selectedBranches] => ["7"]
+    [selectedStaff] => ["3","9"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => hellokitty.png
+            [full_path] => hellokitty.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpAF64.tmp
+            [error] => 0
+            [size] => 52762
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Vampire Facial
+    [description] => Vampire Facial
+    [price] => 2999
+    [selectedBranches] => ["6"]
+    [selectedStaff] => ["4"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => spongebob.webp
+            [full_path] => spongebob.webp
+            [type] => image/webp
+            [tmp_name] => C:\xampp\tmp\php4ABA.tmp
+            [error] => 0
+            [size] => 70986
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Skin Peeling (Chemical Peel)
+    [description] => Skin Peeling (Chemical Peel)
+    [price] => 1499
+    [selectedBranches] => ["7"]
+    [selectedStaff] => ["3","8"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => spongebob.webp
+            [full_path] => spongebob.webp
+            [type] => image/webp
+            [tmp_name] => C:\xampp\tmp\php4C8B.tmp
+            [error] => 0
+            [size] => 70986
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => HIFU V-Shaped Face Contouring with Free Treatment
+    [description] => Slimming Service
+    [price] => 999
+    [selectedBranches] => ["6"]
+    [selectedStaff] => ["1","4"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => bart.jpg
+            [full_path] => bart.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8BC3.tmp
+            [error] => 0
+            [size] => 161877
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => High Dose IV Vitamin C Drip
+    [description] => Whitening Service - 799 Per Session
+    [price] => 799
+    [selectedBranches] => ["7"]
+    [selectedStaff] => ["9","8","3"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => spongebob.webp
+            [full_path] => spongebob.webp
+            [type] => image/webp
+            [tmp_name] => C:\xampp\tmp\php747E.tmp
+            [error] => 0
+            [size] => 70986
+        )
+
+)
+
+POST Data: Array
+(
+    [id] => 
+    [name] => Glutathione Drip (Single Dose)
+    [description] => Whitening Service - Per Session
+    [price] => 1899
+    [selectedBranches] => ["7"]
+    [selectedStaff] => ["3","8"]
+    [duration] => 1
+)
+
+FILES Data: Array
+(
+    [file] => Array
+        (
+            [name] => hellokitty.png
+            [full_path] => hellokitty.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php26C8.tmp
+            [error] => 0
+            [size] => 52762
+        )
+
+)
+
