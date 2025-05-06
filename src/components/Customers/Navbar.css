@@ -1,6 +1,6 @@
 /* Adjust navbar height */
 .navbar {
-    height: 70px; /* You can change this value as needed */
+    height: 85px; /* You can change this value as needed */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     transition: all 0.3s ease-in-out;
@@ -9,7 +9,7 @@
   /* Optional: Adjust logo size to fit new height */
   .navbar-brand img {
     height: 100%; 
-    max-height: 60px;
+    max-height: 63px;
     width: auto;
   }
   

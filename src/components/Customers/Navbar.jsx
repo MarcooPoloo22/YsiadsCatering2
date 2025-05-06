@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/customer/ASR_Logo.png";
+import logo from "../../assets/customer/E0AF2352-7ADE-4637-9755-FF814E41A271_1_201_a.jpeg";
 import "./Navbar.css";
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn, user }) => {
