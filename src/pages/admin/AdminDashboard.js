@@ -1,33 +1,22 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/admin/ASR Logo.png";
+import logo from "../../assets/customer/E0AF2352-7ADE-4637-9755-FF814E41A271_1_201_a.jpeg";
 import frame1 from "../../assets/admin/DashboardDesign.png";
 import welcome from "../../assets/admin/Graphic Side.png";
 import "../../styles/admin/adminDashboard.css";
 import { TbLogout2 } from "react-icons/tb";
 import { RxDashboard } from "react-icons/rx";
-import { VscSettings } from "react-icons/vsc";
-import { LuMessageSquareMore } from "react-icons/lu";
 import { RiDiscountPercentLine, RiEditBoxLine } from "react-icons/ri";
-import { AiOutlineShopping } from "react-icons/ai";
-import { FaRegHandPaper } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlinePolicy } from "react-icons/md";
-import { MdOutlineMedicalServices, MdOutlineEditCalendar, MdPayment } from "react-icons/md";
+import { MdOutlineEditCalendar, MdPayment } from "react-icons/md";
 import { BsPeople } from "react-icons/bs";
 import { IoCallOutline, IoSettingsOutline } from "react-icons/io5";
 import Admin from "../../components/admin/dashboard/admin.js";
-import Appointments from "../../components/admin/dashboard/appointments.js";
-import Branch from "../../components/admin/dashboard/branch.js";
 import Contact from "../../components/admin/dashboard/contact.js";
 import DashboardCalendar from "../../components/admin/dashboard/dashboard.js";
 import Faqs from "../../components/admin/dashboard/faqs.js";
 import Logs from "../../components/admin/dashboard/logs.js";
-import Messages from "../../components/admin/dashboard/messages.js";
-import Products from "../../components/admin/dashboard/products.js";
-import Promos from "../../components/admin/dashboard/promos.js";
-import Services from "../../components/admin/dashboard/services.js";
-import Surgeries from "../../components/admin/dashboard/surgeries.js";
 import Users from "../../components/admin/dashboard/users.js";
 import Password from "../../components/admin/dashboard/password.js";
 import Payment from "../../components/admin/dashboard/payment.js";
@@ -105,17 +94,10 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
   // Map pages to corresponding components.
   const pages = {
     Home: <DashboardCalendar />,
-    Profile: <Branch />,
-    Messages: <Messages />,
-    ManageServices: <Services />,
-    ManagePromos: <Promos />,
-    ManageProducts: <Products />,
     ManageFAQ: <Faqs />,
-    ManageSurgeries: <Surgeries />,
     ManageContact: <Contact />,
     ManagePayment: <Payment />,
     ManagePolicy: <Policy />,
-    ManageAppointments: <Appointments />,
     ManageUsers: <Users />,
     ManageAdmin: <Admin />,
     Logs: <Logs />,
@@ -130,25 +112,6 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
           <Button onClick={() => setActivePage("Home")} isActive={activePage === "Home"}>
             <RxDashboard className="icon" /> Dashboard
           </Button>
-          <Button onClick={() => setActivePage("Profile")} isActive={activePage === "Profile"}>
-            <VscSettings className="icon" /> Branch
-          </Button>
-          <div className="divider" />
-          <Button onClick={() => setActivePage("Messages")} isActive={activePage === "Messages"}>
-            <LuMessageSquareMore className="icon" /> Messages
-          </Button>
-          <Button onClick={() => setActivePage("ManageServices")} isActive={activePage === "ManageServices"}>
-            <FaRegHandPaper className="icon" /> Manage Services
-          </Button>
-          <Button onClick={() => setActivePage("ManagePromos")} isActive={activePage === "ManagePromos"}>
-            <RiDiscountPercentLine className="icon" /> Manage Promos
-          </Button>
-          <Button onClick={() => setActivePage("ManageProducts")} isActive={activePage === "ManageProducts"}>
-            <AiOutlineShopping className="icon" /> Manage Products
-          </Button>
-          <Button onClick={() => setActivePage("ManageSurgeries")} isActive={activePage === "ManageSurgeries"}>
-            <MdOutlineMedicalServices className="icon" /> Manage Surgeries
-          </Button>
           <Button onClick={() => setActivePage("ManageFAQ")} isActive={activePage === "ManageFAQ"}>
             <RiEditBoxLine className="icon" /> Manage FAQ
           </Button>
@@ -162,9 +125,6 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
             <MdOutlinePolicy className="icon" /> Manage Policy
           </Button>
           <div className="divider" />
-          <Button onClick={() => setActivePage("ManageAppointments")} isActive={activePage === "ManageAppointments"}>
-            <MdOutlineEditCalendar className="icon" /> Manage Appointments
-          </Button>
           <Button onClick={() => setActivePage("ManageUsers")} isActive={activePage === "ManageUsers"}>
             <BsPeople className="icon" /> Manage Users
           </Button>
