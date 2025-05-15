@@ -46,12 +46,10 @@ const ComingSoon3 = () => {
           >
             <FadeInSection>
               <h2 className="ezy__comingsoon3-heading">
-                Expert Care for Radiant Skin
+                Culinary Excellence for Every Occasion
               </h2>
               <p className="ezy__comingsoon3-sub-heading mb-5 mb-lg-0">
-                From facials to advanced skin treatments, our specialists ensure
-                you leave feeling refreshed and confident. Rejuvenate in a
-                tranquil, spa-inspired atmosphere.
+                Let us elevate your events with dishes that delight and experiences that linger in memory.
               </p>
             </FadeInSection>
           </Col>

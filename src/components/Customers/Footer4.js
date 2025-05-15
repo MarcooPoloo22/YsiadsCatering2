@@ -40,8 +40,8 @@ const Footer4 = () => {
         <Row className="align-items-center justify-content-center">
           <Col xs="auto" className="text-center">
             <img
-              src="/assets/asr_logoround.png"
-              alt="ASR Logo"
+              src="/assets/8-Eight-Logo-Black.png"
+              alt="Ysiad's Catering Logo"
               className="footer-logo-img"
             />
           </Col>
@@ -54,7 +54,7 @@ const Footer4 = () => {
                 Terms & Condition
               </a>
               <p className="footer-copy">
-                © {new Date().getFullYear()} Aesthetics Skin Renewed. All rights reserved.
+                © {new Date().getFullYear()} Ysiad's Catering. All rights reserved.
               </p>
             </div>
           </Col>

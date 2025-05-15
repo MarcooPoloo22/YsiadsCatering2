@@ -44,11 +44,10 @@ const ComingSoon1 = () => {
           >
             <FadeInSection>
               <h2 className="ezy__comingsoon1-heading mb-4">
-                Your Beauty is at Our Top Priority
+                Your Satisfaction is Our Top Priority
               </h2>
               <p className="ezy__comingsoon1-sub-heading">
-                Our beauty treatments are designed to make you feel confident and
-                beautiful. Book now and unlock a moment of pure bliss.
+                Celebrate life's special moments with our tailored catering services, crafted to perfection just for you.
               </p>
             </FadeInSection>
           </Col>

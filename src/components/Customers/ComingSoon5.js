@@ -41,10 +41,9 @@ const ComingSoon5 = () => {
         <Row className="align-items-center justify-content-between">
           <Col xs={12} lg={6} className="text-center text-lg-start mb-4 mb-lg-0">
             <FadeInSection>
-              <h2 className="spa__heading mb-4">Glow Naturally, Glow ASR</h2>
+              <h2 className="spa__heading mb-4">Dine Like Never Before</h2>
               <p className="spa__subheading mb-4">
-                Indulge in relaxation with our special seasonal treatments. <br />
-                From facials to massages, our spa treatments are designed to rejuvenate your skin and body.
+                Savor the finest dishes and create unforgettable memories with our premium catering services.
               </p>
             </FadeInSection>
           </Col>
@@ -52,9 +51,9 @@ const ComingSoon5 = () => {
             <FadeInSection>
               <div className="spa__image-wrapper">
                 <img
-                  src="./assets/asr_beautytreatment.jpg"
-                  alt="Relaxing Spa"
-                  className="img-fluid rounded shadow"
+                  src="./assets/HomePic4.JPG"
+                  alt="Delicious Catering"
+                  className="img-fluid rounded-circle shadow"
                 />
               </div>
             </FadeInSection>

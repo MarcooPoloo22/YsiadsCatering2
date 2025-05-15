@@ -9,9 +9,9 @@ import "../../styles/customer/Home.css";
 
 function Home() {
   const images = [
-    "/assets/spa_massage.jpg",
-    "/assets/spa_helpdesk.jpg",
-    "/assets/spa_services.jpg"
+    "/assets/HomePic1.JPG",
+    "/assets/HomePic2.JPG",
+    "/assets/HomePic3.JPG"
   ];
   const [current, setCurrent] = useState(0);
 
@@ -38,12 +38,12 @@ function Home() {
 
         <div className="banner-content">
           <img
-            src="/assets/asr_logoround.png"
+            src="/assets/8-Eight-Logo-White.png"
             alt="Aesthetics Skin Renewed Logo"
             className="banner-logo mb-3"
           />
-          <h1 className="banner-title">Glow Up with ASR</h1>
-          <p className="banner-subtitle">Experience premium silicrate, massages, and beauty treatments</p>
+          <h1 className="banner-title">Feast with Ysiad's Catering</h1>
+          <p className="banner-subtitle">Delight in exquisite catering and unforgettable celebrations</p>
           <Link
             to="/booking"
             role="button"
