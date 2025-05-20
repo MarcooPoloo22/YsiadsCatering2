@@ -84,7 +84,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn, setUser }) => {
     <div className="login-container">
       <div className="login-form-container">
         <div className="login-image">
-          <img src="./assets/spa_login.jpg" alt="Pic" />
+          <img src="./assets/LogPic.JPG" alt="Pic" />
         </div>
         <div className="login-form">
           <h2>Login</h2>

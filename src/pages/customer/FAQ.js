@@ -22,7 +22,7 @@ const FAQ = () => {
       <div className="full-width-header">
         <div
           className="service-header"
-          style={{ backgroundImage: "url('/assets/spa_helpdesk.jpg')" }}
+          style={{ backgroundImage: "url('/assets/HeaderPage.JPG')" }}
         >
           <div className="overlay">
             <h1 className="service-title">Frequently Asked Questions</h1>
