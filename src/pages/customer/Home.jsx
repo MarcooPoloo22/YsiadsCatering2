@@ -55,7 +55,6 @@ function Home() {
       </div>
 
       <Con3 />
-      <PromosSection />
       <Con1 />
       <Con2 />
     </>
