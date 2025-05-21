@@ -17,6 +17,7 @@ import Admin from "../../components/admin/dashboard/admin.js";
 import Contact from "../../components/admin/dashboard/contact.js";
 import DashboardCalendar from "../../components/admin/dashboard/CateringAdmin.js";
 import Faqs from "../../components/admin/dashboard/faqs.js";
+import Bookings from "../../components/admin/dashboard/bookings.js";
 import Logs from "../../components/admin/dashboard/logs.js";
 import Password from "../../components/admin/dashboard/password.js";
 import Policy from "../../components/admin/dashboard/policy.js";
@@ -93,6 +94,7 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
   // Map pages to corresponding components.
   const pages = {
     Home: <DashboardCalendar />,
+    Bookings: <Bookings />,
     ManageFAQ: <Faqs />,
     ManageContact: <Contact />,
     ManagePolicy: <Policy />,
@@ -111,6 +113,9 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
           </Button>
           <Button onClick={() => setActivePage("ManageFAQ")} isActive={activePage === "ManageFAQ"}>
             <RiEditBoxLine className="icon" /> Manage FAQ
+          </Button>
+          <Button onClick={() => setActivePage("Bookings")} isActive={activePage === "Bookings"}>
+            <BsPeople className="icon" /> Bookings
           </Button>
           <Button onClick={() => setActivePage("ManageContact")} isActive={activePage === "ManageContact"}>
             <IoCallOutline className="icon" /> Manage Contact

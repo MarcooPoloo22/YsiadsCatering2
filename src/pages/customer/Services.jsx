@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/customer/Services.css";
+import Swal from 'sweetalert2';
+
 
 // Utility function for handling image URLs
 const getImageUrl = (url) => {
@@ -193,11 +195,55 @@ function CateringShowcase() {
     setShowOrderModal(true);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Order Details:", { package: selectedPackage, ...formData });
-    setShowOrderModal(false);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Prepare the data to be sent
+  const orderData = {
+    packageId: selectedPackage.id,
+    title: selectedPackage.title,
+    eventDate: formData.eventDate,
+    guests: formData.guests,
+    dietary: formData.dietary,
+    contact: formData.contact
   };
+
+  try {
+    const response = await fetch('http://localhost/admin_dashboard_backend/submit_catering_order.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(orderData)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Order Submitted!',
+        text: 'Your catering order request has been received.',
+        confirmButtonColor: '#6cb33f'
+      });
+      setShowOrderModal(false);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission Failed',
+        text: result.message || 'Something went wrong. Please try again.',
+      });
+    }
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Server Error',
+      text: 'Could not connect to the server. Please try again later.',
+    });
+    console.error('Error submitting order:', error);
+  }
+};
+
 
   if (loading) {
     return (
@@ -227,29 +273,28 @@ function CateringShowcase() {
 
   return (
     <>
+    {/*
+
+    <div className="service-header" style={{
+      background
+    }}>
+      <div className="full-width-header">
+        <div
+          className="service-header"
+          style={{ backgroundImage: "url('./assets/HeaderPage.JPG')" }}
+        >
+          <div className="overlay">
+            <h1 className="service-title">About The Developers</h1>
+          </div>
+    </div>
+
+    */}
       <div className="service-header" style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/catering-banner.jpg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '300px',
-        position: 'relative'
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/HeaderPage.JPG)`,
       }}>
-        <div className="overlay" style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
+        <div className="overlay">
           <h1 className="service-title" style={{
-            color: 'white',
-            fontSize: '3rem',
-            fontWeight: 'bold',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+
           }}>
             Catering Services
           </h1>
