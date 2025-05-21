@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/customer/Services.css";
 
+// Utility function for handling image URLs
+const getImageUrl = (url) => {
+  try {
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url;
+    }
+    if (url.startsWith('/')) {
+      return process.env.PUBLIC_URL + url;
+    }
+    return process.env.PUBLIC_URL + '/uploads/' + url;
+  } catch (e) {
+    console.error('Invalid image URL:', url, e);
+    return process.env.PUBLIC_URL + '/assets/default-catering.jpg';
+  }
+};
+
 const CateringPackage = ({ title, description, images, price, onOrderNow }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imageLoadError, setImageLoadError] = useState(false);
   const MAX_WORDS = 15;
   const MAX_CHARS = 100;
 
@@ -20,11 +37,13 @@ const CateringPackage = ({ title, description, images, price, onOrderNow }) => {
   const handlePrev = (e) => {
     e.stopPropagation();
     setCurrentImageIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+    setImageLoadError(false);
   };
 
   const handleNext = (e) => {
     e.stopPropagation();
     setCurrentImageIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
+    setImageLoadError(false);
   };
 
   return (
@@ -138,27 +157,36 @@ function CateringShowcase() {
   });
 
   useEffect(() => {
-  const fetchPackages = async () => {
-    try {
-      const response = await fetch('http://localhost/admin_dashboard_backend/fetch_catering.php');
-      if (!response.ok) {
-        throw new Error('Failed to fetch catering packages');
+    const fetchPackages = async () => {
+      try {
+        const response = await fetch('http://localhost/admin_dashboard_backend/fetch_catering.php');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('API Response:', data);
+        
+        if (data.success) {
+          const validatedPackages = data.packages.map(pkg => ({
+            ...pkg,
+            images: Array.isArray(pkg.images) && pkg.images.length > 0 
+              ? pkg.images 
+              : [process.env.PUBLIC_URL + '/assets/default-catering.jpg']
+          }));
+          setPackages(validatedPackages);
+        } else {
+          setError(data.message || 'Unknown error occurred');
+        }
+      } catch (err) {
+        console.error('Fetch error:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
       }
-      const data = await response.json();
-      if (data.success) {
-        setPackages(data.packages);
-      } else {
-        setError(data.message);
-      }
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
 
-  fetchPackages();
-}, []);
+    fetchPackages();
+  }, []);
 
   const handleOrderNow = (pkg) => {
     setSelectedPackage(pkg);
@@ -167,24 +195,64 @@ function CateringShowcase() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Order Details:", { package: selectedPackage, ...formData });
     setShowOrderModal(false);
   };
 
   if (loading) {
-    return <div className="text-center my-5">Loading catering packages...</div>;
+    return (
+      <div className="text-center my-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <p>Loading catering packages...</p>
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="alert alert-danger text-center my-5">{error}</div>;
+    return (
+      <div className="alert alert-danger text-center my-5">
+        <h4>Error Loading Packages</h4>
+        <p>{error}</p>
+        <button 
+          className="btn btn-primary"
+          onClick={() => window.location.reload()}
+        >
+          Try Again
+        </button>
+      </div>
+    );
   }
 
   return (
     <>
-      <div className="service-header" style={{ backgroundImage: "url('/assets/catering-banner.jpg')" }}>
-        <div className="overlay">
-          <h1 className="service-title">Catering Services</h1>
+      <div className="service-header" style={{ 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/catering-banner.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '300px',
+        position: 'relative'
+      }}>
+        <div className="overlay" style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <h1 className="service-title" style={{
+            color: 'white',
+            fontSize: '3rem',
+            fontWeight: 'bold',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+          }}>
+            Catering Services
+          </h1>
         </div>
       </div>
 
@@ -194,7 +262,10 @@ function CateringShowcase() {
             <div 
               className="col-12 col-md-6 fade-in" 
               key={pkg.id} 
-              style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
+              style={{ 
+                animationDelay: `${index * 100}ms`, 
+                animationFillMode: 'both' 
+              }}
             >
               <CateringPackage
                 title={pkg.title}
@@ -208,44 +279,106 @@ function CateringShowcase() {
         </div>
       </div>
 
-      {/* Order Form Modal */}
       {showOrderModal && selectedPackage && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="modal-overlay" style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div className="modal-content" style={{
+            backgroundColor: 'white',
+            padding: '25px',
+            borderRadius: '10px',
+            maxWidth: '850px',
+            width: '90%',
+            maxHeight: '90vh',
+            overflow: 'auto',
+            position: 'relative'
+          }}>
             <button 
               className="modal-close"
               onClick={() => setShowOrderModal(false)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: 'none',
+                border: 'none',
+                fontSize: '1.5rem',
+                cursor: 'pointer'
+              }}
             >
               ×
             </button>
             
-            <div className="modal-body">
-              <div className="modal-images">
+            <div className="modal-body" style={{
+              display: 'grid',
+              gap: '25px',
+              gridTemplateColumns: '1fr 1fr'
+            }}>
+              <div className="modal-images" style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '15px'
+              }}>
                 {selectedPackage.images.map((img, index) => (
                   <img
                     key={index}
-                    src={img}
-                    alt={selectedPackage.title}
+                    src={getImageUrl(img)}
+                    alt={`${selectedPackage.title} ${index + 1}`}
                     className="modal-image"
+                    style={{
+                      width: '100%',
+                      height: '200px',
+                      objectFit: 'cover',
+                      borderRadius: '8px'
+                    }}
+                    onError={(e) => {
+                      e.target.src = process.env.PUBLIC_URL + '/assets/default-catering.jpg';
+                    }}
                   />
                 ))}
               </div>
               
-              <form onSubmit={handleSubmit} className="order-form">
+              <form onSubmit={handleSubmit} className="order-form" style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '15px'
+              }}>
                 <h3>{selectedPackage.title}</h3>
                 <p>{selectedPackage.description}</p>
                 
-                <div className="form-group">
+                <div className="form-group" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '5px'
+                }}>
                   <label>Event Date:</label>
                   <input
                     type="date"
                     required
                     value={formData.eventDate}
                     onChange={(e) => setFormData({...formData, eventDate: e.target.value})}
+                    style={{
+                      padding: '8px',
+                      border: '1px solid #ddd',
+                      borderRadius: '4px'
+                    }}
                   />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '5px'
+                }}>
                   <label>Number of Guests:</label>
                   <input
                     type="number"
@@ -253,19 +386,38 @@ function CateringShowcase() {
                     max="500"
                     value={formData.guests}
                     onChange={(e) => setFormData({...formData, guests: e.target.value})}
+                    style={{
+                      padding: '8px',
+                      border: '1px solid #ddd',
+                      borderRadius: '4px'
+                    }}
                   />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '5px'
+                }}>
                   <label>Dietary Requirements:</label>
                   <textarea
                     value={formData.dietary}
                     onChange={(e) => setFormData({...formData, dietary: e.target.value})}
                     placeholder="Any special dietary needs or allergies..."
+                    style={{
+                      padding: '8px',
+                      border: '1px solid #ddd',
+                      borderRadius: '4px',
+                      minHeight: '80px'
+                    }}
                   />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '5px'
+                }}>
                   <label>Contact Information:</label>
                   <input
                     type="email"
@@ -273,11 +425,30 @@ function CateringShowcase() {
                     value={formData.contact}
                     onChange={(e) => setFormData({...formData, contact: e.target.value})}
                     placeholder="your@email.com"
+                    style={{
+                      padding: '8px',
+                      border: '1px solid #ddd',
+                      borderRadius: '4px'
+                    }}
                   />
                 </div>
 
-                <div className="form-actions">
-                  <button type="submit" className="btn-submit">
+                <div className="form-actions" style={{
+                  marginTop: '15px'
+                }}>
+                  <button 
+                    type="submit" 
+                    className="btn-submit"
+                    style={{
+                      background: '#6cb33f',
+                      color: 'white',
+                      padding: '12px 20px',
+                      border: 'none',
+                      borderRadius: '5px',
+                      cursor: 'pointer',
+                      width: '100%'
+                    }}
+                  >
                     Submit Order Request
                   </button>
                 </div>
@@ -286,96 +457,6 @@ function CateringShowcase() {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        .modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0,0,0,0.5);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 1000;
-        }
-
-        .modal-content {
-          background: white;
-          padding: 25px;
-          border-radius: 10px;
-          max-width: 850px;
-          width: 90%;
-          max-height: 90vh;
-          overflow: auto;
-          position: relative;
-        }
-
-        .modal-close {
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          background: none;
-          border: none;
-          font-size: 1.5rem;
-          cursor: pointer;
-        }
-
-        .modal-body {
-          display: grid;
-          gap: 25px;
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .modal-images {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .modal-image {
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 8px;
-        }
-
-        .order-form {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-          padding: 8px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-        }
-
-        .btn-submit {
-          background: #6cb33f;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          margin-top: 15px;
-        }
-
-        @media (max-width: 768px) {
-          .modal-body {
-            grid-template-columns: 1fr;
-          }
-        }
-      `}</style>
     </>
   );
 }

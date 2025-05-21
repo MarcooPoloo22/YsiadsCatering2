@@ -19,7 +19,6 @@ import DashboardCalendar from "../../components/admin/dashboard/CateringAdmin.js
 import Faqs from "../../components/admin/dashboard/faqs.js";
 import Logs from "../../components/admin/dashboard/logs.js";
 import Password from "../../components/admin/dashboard/password.js";
-import Payment from "../../components/admin/dashboard/payment.js";
 import Policy from "../../components/admin/dashboard/policy.js";
 
 const Button = ({ children, onClick, isActive }) => (
@@ -96,7 +95,6 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
     Home: <DashboardCalendar />,
     ManageFAQ: <Faqs />,
     ManageContact: <Contact />,
-    ManagePayment: <Payment />,
     ManagePolicy: <Policy />,
     ManageAdmin: <Admin />,
     Logs: <Logs />,
@@ -116,9 +114,6 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
           </Button>
           <Button onClick={() => setActivePage("ManageContact")} isActive={activePage === "ManageContact"}>
             <IoCallOutline className="icon" /> Manage Contact
-          </Button>
-          <Button onClick={() => setActivePage("ManagePayment")} isActive={activePage === "ManagePayment"}>
-            <MdPayment className="icon" /> Manage Payment
           </Button>
           <Button onClick={() => setActivePage("ManagePolicy")} isActive={activePage === "ManagePolicy"}>
             <MdOutlinePolicy className="icon" /> Manage Policy
