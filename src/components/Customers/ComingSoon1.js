@@ -56,17 +56,17 @@ const ComingSoon1 = () => {
             <FadeInSection>
               <div className="ezy__comingsoon1-image-grid">
                 <img
-                  src="./assets/asr_beautytreatment2.jpg"
+                  src="./assets/Table1copy.JPG"
                   alt="Spa 1"
                   className="img-fluid rounded shadow"
                 />
                 <img
-                  src="./assets/asr_beautytreatment3.jpg"
+                  src="./assets/Table2copy.JPG"
                   alt="Spa 2"
                   className="img-fluid rounded shadow"
                 />
                 <img
-                  src="./assets/spa_services.jpg"
+                  src="./assets/Table3copy.JPG"
                   alt="Spa 3"
                   className="img-fluid rounded shadow"
                 />

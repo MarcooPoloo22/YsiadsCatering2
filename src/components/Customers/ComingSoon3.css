@@ -1,6 +1,8 @@
 .ezy__comingsoon3 {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #faf3eb 0%, #d0eae2 100%);
+  --bs-body-color: #262830;
+  --bs-body-bg: #ffffff;
+  background-color: var(--bs-body-bg);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   color: #3e3e3e;
 }
@@ -10,7 +12,7 @@
   font-family: "Georgia", serif;
   font-weight: 600px;
   font-size: 3rem;
-  color: #4a715d; /* muted green */
+  color: #c6ac8f; /* muted green */
   margin-bottom: 1rem;
   caret-color: transparent;
 }

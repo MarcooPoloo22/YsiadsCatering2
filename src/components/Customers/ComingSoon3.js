@@ -57,7 +57,7 @@ const ComingSoon3 = () => {
             <FadeInSection>
               <div className="ezy__comingsoon3-image-wrapper">
                 <img
-                  src="/assets/asr_home1.jpg"
+                  src="/assets/Sats.JPG"
                   alt="Spa"
                   className="img-fluid"
                 />
