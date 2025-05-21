@@ -82,12 +82,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, user }) => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/services">
-                  Tralalero
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/services">
-                  Tralala
+                  Catering
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -98,6 +93,11 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, user }) => {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
                   Contact Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/dev">
+                  Developer's Page
                 </NavLink>
               </li>
             </ul>

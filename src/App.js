@@ -14,7 +14,9 @@ import CreateAccount from "./pages/customer/CreateAccount";
 import ForgotPassword from "./pages/customer/ForgotPassword";
 import Footer4 from "./components/Customers/Footer4";
 import FAQ from "./pages/customer/FAQ";
+import Services from "./pages/customer/Services";
 import Contact from "./pages/customer/Contact";
+import Dev from "./pages/customer/Dev";
 import ResetPasswordPage from "./pages/customer/ResetPasswordPage";
 import AppointmentNotifications from "./services/AppointmentNotifications";
 import {
@@ -197,7 +199,9 @@ const MainContent = ({ user, setUser, isLoggedIn, setIsLoggedIn, loading }) => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/services" element={<Services/>}/>
           <Route path="/contact" element={<Contact />} />
+          <Route path="/dev" element={<Dev />} />
           <Route
             path="/login"
             element={

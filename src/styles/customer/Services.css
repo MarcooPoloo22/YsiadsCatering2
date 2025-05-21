@@ -89,4 +89,43 @@
     animation: fadeIn 0.8s ease-in-out;
   }
 
+  /* Add these to your CSS */
+.modal-overlay {
+  /* existing styles from JSX */
+}
+
+.service-header {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-bookser {
+  background: #6cb33f;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-bookser:hover {
+  background: #5a9e33;
+  transform: translateY(-2px);
+}
   

@@ -99,7 +99,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn, setUser }) => {
               onChange={handleChange}
               required
             />
-            <label htmlFor="password">Password</label>
+            <label style={{marginTop:'10px'}} htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -109,12 +109,10 @@ const Login = ({ isLoggedIn, setIsLoggedIn, setUser }) => {
               onChange={handleChange}
               required
             />
-            <Link to="/forgot-password">Forgot password?</Link>
             <br />
-            <button type="submit" className="btn">
+            <button style={{marginTop:'40px'}} type="submit" className="btn">
               Sign In
             </button>
-            <Link to="/create-account">Don’t have an account?</Link>
           </form>
         </div>
       </div>

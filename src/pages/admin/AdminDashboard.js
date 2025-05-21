@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/customer/E0AF2352-7ADE-4637-9755-FF814E41A271_1_201_a.jpeg";
 import frame1 from "../../assets/admin/DashboardDesign.png";
-import welcome from "../../assets/admin/Graphic Side.png";
+import welcome from "../../assets/admin/Graphic Side (2).png";
+
 import "../../styles/admin/adminDashboard.css";
 import { TbLogout2 } from "react-icons/tb";
 import { RxDashboard } from "react-icons/rx";
@@ -14,10 +15,9 @@ import { BsPeople } from "react-icons/bs";
 import { IoCallOutline, IoSettingsOutline } from "react-icons/io5";
 import Admin from "../../components/admin/dashboard/admin.js";
 import Contact from "../../components/admin/dashboard/contact.js";
-import DashboardCalendar from "../../components/admin/dashboard/dashboard.js";
+import DashboardCalendar from "../../components/admin/dashboard/CateringAdmin.js";
 import Faqs from "../../components/admin/dashboard/faqs.js";
 import Logs from "../../components/admin/dashboard/logs.js";
-import Users from "../../components/admin/dashboard/users.js";
 import Password from "../../components/admin/dashboard/password.js";
 import Payment from "../../components/admin/dashboard/payment.js";
 import Policy from "../../components/admin/dashboard/policy.js";
@@ -98,7 +98,6 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
     ManageContact: <Contact />,
     ManagePayment: <Payment />,
     ManagePolicy: <Policy />,
-    ManageUsers: <Users />,
     ManageAdmin: <Admin />,
     Logs: <Logs />,
     Password: <Password />,
@@ -110,7 +109,7 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
       return (
         <>
           <Button onClick={() => setActivePage("Home")} isActive={activePage === "Home"}>
-            <RxDashboard className="icon" /> Dashboard
+            <RxDashboard className="icon" /> Manage Catering
           </Button>
           <Button onClick={() => setActivePage("ManageFAQ")} isActive={activePage === "ManageFAQ"}>
             <RiEditBoxLine className="icon" /> Manage FAQ
@@ -125,19 +124,16 @@ const Dashboard = ({ isLoggedIn, user, setUser, setIsLoggedIn }) => {
             <MdOutlinePolicy className="icon" /> Manage Policy
           </Button>
           <div className="divider" />
-          <Button onClick={() => setActivePage("ManageUsers")} isActive={activePage === "ManageUsers"}>
-            <BsPeople className="icon" /> Manage Users
-          </Button>
           <Button onClick={() => setActivePage("ManageAdmin")} isActive={activePage === "ManageAdmin"}>
             <BsPeople className="icon" /> Manage Admin
+          </Button>
+          <Button onClick={() => setActivePage("Password")} isActive={activePage === "Password"}>
+            <RiLockPasswordLine className="icon" /> Change Password
           </Button>
           <Button onClick={() => setActivePage("Logs")} isActive={activePage === "Logs"}>
             <IoSettingsOutline className="icon" /> Audit Trail
           </Button>
-          <div className="divider" />
-          <Button onClick={() => setActivePage("Password")} isActive={activePage === "Password"}>
-            <RiLockPasswordLine className="icon" /> Change Password
-          </Button>
+          
         </>
       );
     } else if (user?.role === "employee") {

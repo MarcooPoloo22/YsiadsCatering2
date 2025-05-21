@@ -44,13 +44,6 @@ function Home() {
           />
           <h1 className="banner-title">Feast with Ysiad's Catering</h1>
           <p className="banner-subtitle">Delight in exquisite catering and unforgettable celebrations</p>
-          <Link
-            to="/booking"
-            role="button"
-            className="banner-button"
-          >
-            Book Now <span style={{ fontSize: '1.4rem' }}>→</span>
-          </Link>
         </div>
       </div>
 

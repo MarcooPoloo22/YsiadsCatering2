@@ -79,7 +79,7 @@ body {
 }
 
 .login-form .btn {
-  background: linear-gradient(to right, #8BC34A, #66BB6A); 
+  background: linear-gradient(to right, #AC8B32, #FFF25E); 
   color: white !important;
   padding: 10px;
   border: none;
@@ -96,7 +96,7 @@ body {
 .login-form .btn:hover,
 .login-form .btn:focus,
 .login-form .btn:active {
-  background: linear-gradient(to right, #7CB342, #4CAF50); 
+  background: linear-gradient(to right, #FFF25E, #AC8B32); 
   transform: translateY(-2px);
   color: white !important;
   outline: none;

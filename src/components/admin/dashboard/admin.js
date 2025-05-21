@@ -68,11 +68,6 @@ const UserTable = ({ setActivePage, users, fetchUsers }) => {
       sortable: true,
     },
     {
-      name: 'Role',
-      selector: row => row.role,
-      sortable: true,
-    },
-    {
       name: 'Action',
       cell: row => (
         <div>
@@ -115,7 +110,7 @@ const ManageUserEdit = ({ setActivePage, user, fetchUsers }) => {
     last_name: user.last_name,
     email: user.email,
     contact_no: user.contact_no,
-    role: user.role,
+    role: 'admin', // Set to admin by default
     password: '',
   });
 
@@ -198,18 +193,6 @@ const ManageUserEdit = ({ setActivePage, user, fetchUsers }) => {
             />
           </div>
           <div className="form-group">
-            <label className="questionLabel">Role</label>
-            <select
-              className="questionInput"
-              value={formData.role}
-              onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-              required
-            >
-              <option value="admin">Admin</option>
-              <option value="employee">Employee</option>
-            </select>
-          </div>
-          <div className="form-group">
             <label className="questionLabel">New Password (leave blank to keep current)</label>
             <input
               className="questionInput"
@@ -232,7 +215,7 @@ const ManageUserAdd = ({ setActivePage, fetchUsers }) => {
     last_name: '',
     email: '',
     contact_no: '',
-    role: 'employee', // Default role set to 'employee'
+    role: 'admin', // Set to admin by default
     password: '',
     password_confirmation: '',
   });
@@ -331,18 +314,6 @@ const ManageUserAdd = ({ setActivePage, fetchUsers }) => {
             />
           </div>
           <div className="form-group">
-            <label className="questionLabel">Role</label>
-            <select
-              className="questionInput"
-              value={formData.role}
-              onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-              required
-            >
-              <option value="admin">Admin</option>
-              <option value="employee">Employee</option>
-            </select>
-          </div>
-          <div className="form-group">
             <label className="questionLabel">Password</label>
             <input
               className="questionInput"
@@ -395,8 +366,7 @@ const UserManagement = () => {
 
   const filteredData = users.filter(user =>
     `${user.first_name} ${user.last_name}`.toLowerCase().includes(searchText.toLowerCase()) ||
-    user.email.toLowerCase().includes(searchText.toLowerCase()) ||
-    user.role.toLowerCase().includes(searchText.toLowerCase())
+    user.email.toLowerCase().includes(searchText.toLowerCase())
   );
 
   if (loading) return <div>Loading...</div>;
