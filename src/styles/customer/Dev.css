@@ -1,0 +1,72 @@
+/* Style for the developer section */
+.developer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  max-width: 260px;
+  margin: 1.5rem auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.developer:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.developer img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 0.75rem;
+}
+
+.developer-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.25rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.age {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.1rem 0 0.2rem 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.role {
+  font-size: 1.05rem;
+  color: #007b83;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.3px;
+}
+
+.developers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .developers-list {
+    gap: 1.2rem;
+  }
+  .developer {
+    max-width: 90vw;
+    padding: 1.2rem 0.5rem;
+  }
+}
